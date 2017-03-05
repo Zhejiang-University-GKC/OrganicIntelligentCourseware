@@ -1,0 +1,84 @@
+﻿%
+% GNU courseware, XIN YUAN, 2017
+%
+
+\documentclass[11pt]{beamer}
+\usepackage{beamerthemesplit}
+\usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\setCJKmonofont{SimSun}
+\usetheme{berkeley}
+
+\parindent 2em
+
+%title
+\title{生物智能与算法}
+\author{袁昕}
+\date{\today}
+
+\begin{document}
+
+%title
+\frame{\titlepage}
+
+\frame{
+\centerline{\textbf{\Huge{进化算法}}}
+}
+
+%tables
+
+\section*{大纲}
+
+\frame{\tableofcontents}
+
+%definition
+
+\section{定义}
+
+\frame{\frametitle{定义}
+又叫演化计算，是模拟自然界中的生物的演化过程产生的一种群体导向的随机搜索技术和方法。
+
+~
+
+是一种通用的问题求解方法，具有自组织、自适应、自学习性和本质并行性等特点，
+不受搜索空间限制性条件的约束，也不需要其它辅助信息。
+}
+
+\frame{\frametitle{思想}
+其算法是受生物进化过程中“优胜劣汰”的自然选择机制和遗传信息的传递规律的影响，
+通过程序迭代模拟这一过程，把要解决的问题看作环境，在一些可能的解组成的种群中，
+通过自然演化寻求最优解。
+}
+
+\section{种类}
+
+\frame{\frametitle{种类}
+	\begin{itemize}
+		\item<1-> 遗传算法
+		\item<2-> 演化策略，修改参数
+		\item<3-> 演化规划，自适应响应
+		\item<4-> 遗传程序设计，改变分层节点和结构链接关系
+		\item<5-> 多种群协同进化，竞争和合作的动力学系统
+		\item<6-> 差分进化算法，个体间竞争和合作的系统
+	\end{itemize}
+}
+
+\section{思考}
+
+\frame{\frametitle{思考}
+	\begin{enumerate}
+		\item<1-> 针对的问题是什么，除了优化问题和预测问题，还能处理其他什么问题？
+		\item<2-> 如何对求解的量设计编码？
+		\item<3-> 这一类方法的几何和物理本质是什么？
+		\item<4-> 存在过度成熟问题吗？其优缺点和适用范围？
+		\item<5-> 近年有哪些新的模型？
+		\item<6-> 有没有进一步改进的空间？
+	\end{enumerate}
+}
+
+\frame{\frametitle{结束}
+
+\centerline{\textbf{\Huge{结束!}}}
+}
+
+\end{document}
