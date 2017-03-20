@@ -18,12 +18,7 @@
 
 \begin{document}
 
-%title
 \frame{\titlepage}
-
-\frame{
-\centerline{\textbf{\Huge{进化算法}}}
-}
 
 %tables
 
@@ -31,9 +26,26 @@
 
 \frame{\tableofcontents}
 
-%definition
+%summary
 
-\section{定义}
+\section{思考}
+
+\frame{\frametitle{思考}
+	\begin{enumerate}
+		\item<1-> 针对的问题是什么，除了优化问题和预测问题，还能处理其他什么问题？
+		\item<2-> 如何对求解的量设计编码？
+		\item<3-> 这一类方法的几何和物理本质是什么？
+		\item<4-> 存在过度成熟问题吗？其优缺点和适用范围？
+		\item<5-> 近年有哪些新的变种算法和模型？
+		\item<6-> 有没有进一步改进的空间？
+	\end{enumerate}
+}
+
+\section{进化算法}
+
+\frame{
+\centerline{\textbf{\Huge{进化算法}}}
+}
 
 \frame{\frametitle{定义}
 又叫演化计算，是模拟自然界中的生物的演化过程产生的一种群体导向的随机搜索技术和方法。
@@ -50,8 +62,6 @@
 通过自然演化寻求最优解。
 }
 
-\section{种类}
-
 \frame{\frametitle{种类}
 	\begin{itemize}
 		\item<1-> 遗传算法
@@ -63,21 +73,66 @@
 	\end{itemize}
 }
 
-\section{思考}
+\section{免疫算法}
 
-\frame{\frametitle{思考}
-	\begin{enumerate}
-		\item<1-> 针对的问题是什么，除了优化问题和预测问题，还能处理其他什么问题？
-		\item<2-> 如何对求解的量设计编码？
-		\item<3-> 这一类方法的几何和物理本质是什么？
-		\item<4-> 存在过度成熟问题吗？其优缺点和适用范围？
-		\item<5-> 近年有哪些新的变种算法和模型？
-		\item<6-> 有没有进一步改进的空间？
-	\end{enumerate}
+\frame{
+\centerline{\textbf{\Huge{免疫算法}}}
 }
 
-\frame{\frametitle{结束}
+\frame{\frametitle{定义}
 
+一种具有生成+检测 (generate and test) 的迭代过程的搜索算法。
+
+}
+
+\frame{\frametitle{思想}
+生物免疫系统是一个分布式、自组织和具有动态平衡能力的自适应复杂系统。
+它对外界入侵的抗原，可由分布全身的不同种类的淋巴细胞产生相应的抗体，
+其目标是尽可能保证整个生物系统的基本生理功能得到正常运转。
+
+~
+
+具有较强模式分类能力，尤其对多模态问题的分析、处理和求解表现出较高的智能性和鲁棒性。
+}
+
+\frame{\frametitle{思想}
+	\begin{itemize}
+		\item<1-> 抗原和抗体
+		\item<2-> 免疫疫苗
+		\item<3-> 免疫算子
+		\item<4-> 免疫调节
+		\item<5-> 免疫记忆
+		\item<6-> 抗原识别
+	\end{itemize}
+}
+
+\frame{\frametitle{种类}
+	\begin{itemize}
+		\item<1-> 一般免疫算法
+		\item<2-> 阴性选择和克隆选择算法
+		\item<3-> 免疫网络学说与人工免疫网络模型
+		\item<4-> 混合免疫算法
+	\end{itemize}
+}
+
+\frame{\frametitle{发展}
+在基于马尔科夫链的收敛性分析和非线性动力学模型等方面，
+对免疫优化算法的非线性随机分析可能是未来研究的难点之一。
+
+~
+
+神经网络、内分泌及免疫这三大调节系统相互联系、相互补充和配合、相互制约的机理
+为基于人工免疫系统的智能综合集成提供了生物学基础，
+网络和智能成为免疫算法发展的不可缺少的特征,也是其重要应用领域。
+
+~
+
+免疫算法能增强系统的鲁棒性，在网络、智能系统和鲁棒系统中的应用。
+}
+
+%end
+
+\frame{\frametitle{结束}
 \centerline{\textbf{\Huge{结束!}}}
 }
 
