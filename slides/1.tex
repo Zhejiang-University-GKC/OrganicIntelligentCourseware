@@ -4,6 +4,8 @@
 
 \documentclass[11pt]{beamer}
 \usepackage{beamerthemesplit}
+\usepackage{algorithm, algorithmic}
+\usepackage{tikz}
 \usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
 \setCJKmainfont[BoldFont=SimHei]{SimSun}
 \setCJKmonofont{SimSun}
@@ -177,6 +179,76 @@
 		\item<8-> 花朵授粉
 		\item<9-> 灰狼
 	\end{itemize}
+}
+
+\frame{\frametitle{公式示例}
+
+\begin{equation*}
+p_{ij}^{k}(t) = \left\{
+	\begin{array}{lc}
+	\frac{[\tau_{ij}(t)]^{\alpha}\cdot[\eta_{ij}(t)]^{\beta}}{\sum\limits_{s\in J_{k}(i)} [\tau_{is}(t)]^{\alpha}\cdot[\eta_{is}(t)]^{\beta}}, & \mbox{如果} J \in J_{k}(i) \\
+	0, & \mbox{否则}
+	\end{array} \right.
+\end{equation*}
+}
+
+\frame{\frametitle{定理示例}
+
+\newtheorem{zh-thm}{定理}
+\begin{zh-thm}
+如果有a,b,c, 则有$a^2+b^2=c^2$。
+\end{zh-thm}
+
+\renewcommand\proofname{证明}
+\begin{proof}
+因为有a,b,c, 所以有$a^2+b^2=c^2$。
+\end{proof}
+}
+
+\frame{\frametitle{算法示例}
+
+\begin{algorithm}[H]
+\caption{计算 $y=x^n$}\label{alg1}
+\algsetup{linenosize=\tiny} \scriptsize
+	\begin{algorithmic}
+		\REQUIRE $n \geq 0 \vee x \neq 0$
+		\ENSURE $y=x^n$
+		\STATE $y \Leftarrow 1$
+		\IF{$n < 0$}
+			\STATE $X \Leftarrow 1 / x$
+			\STATE $N \Leftarrow -n$
+		\ELSE
+			\STATE $X \Leftarrow x$
+			\STATE $N \Leftarrow n$
+		\ENDIF
+		\WHILE{$N \neq 0$}
+			\IF{$N$ is even}
+				\STATE $X \Leftarrow X \times X$
+				\STATE $N \Leftarrow N / 2$
+			\ELSE[$N$ is odd]
+				\STATE $y \Leftarrow y \times X$
+				\STATE $N \Leftarrow N - 1$
+			\ENDIF
+		\ENDWHILE
+	\end{algorithmic}
+\end{algorithm}
+}
+
+\frame{\frametitle{流程图示例}
+
+\tikzstyle{block}=[rectangle,draw,fill=blue!20,text width=4em,text centered,rounded corners]
+\tikzstyle{huge-block}=[rectangle,draw,fill=cyan!20,text width=5em,text centered,rounded corners,minimum height=4em]
+\tikzstyle{line}=[draw]
+\begin{tikzpicture}[node distance=2cm, auto]
+\path[use as bounding box] (-4, 0) rectangle (10, -2);
+\path[line]<1-> node[huge-block](center){共享仓库};
+\path[line, <->]<2-> node[block, below of=center, node distance=3cm](center-develop){开发者2}
+(center)--(center-develop);
+\path[line, <->]<3-> node[block, left of=center-develop, node distance=3cm](left-develop){开发者1}
+(center)--(left-develop);
+\path[line, <->]<4-> node[block, right of=center-develop, node distance=3cm](right-develop){开发者3}
+(center)--(right-develop);
+\end{tikzpicture}
 }
 
 \section{人工神经网络}

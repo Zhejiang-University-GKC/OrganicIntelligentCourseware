@@ -4,6 +4,8 @@
 
 \documentclass[11pt]{beamer}
 \usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{colortbl}
 \usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
 \setCJKmainfont[BoldFont=SimHei]{SimSun}
 \setCJKmonofont{SimSun}
@@ -148,7 +150,37 @@
 }
 
 \frame{\frametitle{报告形式}
+\begin{minipage}[t]{\textwidth}
 幻灯和报告可充分应用图形摘要、漫画等趣味形式，形成既科普，又专业的作品。
+\end{minipage}
+
+\uncover<2->{
+\begin{minipage}[b]{\textwidth}
+\begin{figure}[hb]
+\centering
+\includegraphics[width=0.8\textwidth]{0/ant.png}
+\end{figure}
+\end{minipage}
+}
+}
+
+\frame{\frametitle{算法对比}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+算法   &  精度    &  运算时间(s)\\
+\hline
+蚁群   &  90\%    &  10.3\\
+\hline
+\rowcolor[rgb]{0.0, 0.8, 0.8}
+进化   &  \textcolor[rgb]{1.0, 1.0, 0.0}{91.2\%}  &  20.6\\
+\hline
+免疫   &  93.1\%  &  15.9\\
+\hline
+\end{tabular}
+\end{table}
 }
 
 \frame{\frametitle{结束}
