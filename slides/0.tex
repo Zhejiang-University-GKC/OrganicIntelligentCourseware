@@ -7,8 +7,15 @@
 \usepackage{graphicx}
 \usepackage{colortbl}
 \usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
-\setCJKmainfont[BoldFont=SimHei]{SimSun}
-\setCJKmonofont{SimSun}
+\setCJKmainfont[BoldFont=SimHei,SlantedFont=KaiTi]{SimSun}
+\setCJKsansfont[BoldFont=SimHei,SlantedFont=KaiTi]{SimSun}
+\setCJKmonofont[ItalicFont={Adobe Fangsong Std}]{SimSun}
+\setCJKfamilyfont{zhsong}{SimSun}
+%\setCJKfamilyfont{zhhei}{Adobe Song Std}
+\setCJKfamilyfont{zhhei}{SimHei}
+%\setCJKfamilyfont{zhhei}{Adobe Heiti Std}
+\setCJKfamilyfont{zhkai}{KaiTi}
+\setCJKfamilyfont{zhfs}{FangSong}
 \usetheme{warsaw}
 
 \parindent 2em
@@ -70,7 +77,7 @@
 }
 
 \frame{\frametitle{方法}
-都是仿生算法。
+都是\textsl{仿生算法}。
 
 ~
 
@@ -81,12 +88,14 @@
 
 \frame{\frametitle{优点}
 
+{\CJKfamily{zhfs}
 智能计算还具有简单、通用、鲁棒性强、适于并行处理的优点，
 使其在并行搜索、联想记忆、模式识别、知识自动获取等方面得到了广泛的应用。
+}
 
 ~
 
-本课目的之一，要能说出各种方法的本质和思维共性。
+本课目的之一，要能说出各种方法的\textbf{本质}和\textbf{思维共性}。
 }
 
 \frame{\frametitle{缺点}
@@ -96,13 +105,17 @@
 
 \frame{\frametitle{与传统人工智能对比}
 
+{\CJKfamily{zhhei}
 计算智能有别于传统的符号智能。符号智能是以知识为基础，通过推理进行问题求解，也即传统的人工智能；
 而计算智能则是以数据为基础，通过训练建立联系，进行问题求解。
+}
 
 ~
 
+{\CJKfamily{zhkai}
 计算智能是以联接主义为主的思维方式，即研究简单个体如何在简单交互规则指导下，
 构成具有复杂智能行为的高层系统。
+}
 
 ~
 
