@@ -1,0 +1,123 @@
+﻿%
+% GNU courseware, XIN YUAN, 2017
+%
+
+\section{群聚智能}
+
+\frame{
+\centerline{\textbf{\Huge{群聚智能}}}
+}
+
+\frame{\frametitle{定义}
+
+无智能或简单智能的主体通过任何形式的聚集协作而表现出智能行为的特性。
+
+~
+
+群，是一组相互之间可以进行直接或间接通信(通过改变局部环境)的主体。
+}
+
+\frame{\frametitle{思想}
+
+源于分子自动机系统的自组织研究。
+在没有集中且不提供全局模型的前提下，为寻找复杂分布式问题解决方案提供基础。
+}
+
+\frame{\frametitle{思想}
+相对于传统的梯度优化算法
+
+~
+
+	\begin{itemize}
+		\item<1-> 完全分布式处理个体间和个体环境间作用，具有自组织性；
+		\item<2-> 个体间非直接，合作基于环境感知，系统可扩展和安全；
+		\item<3-> 无集中控制，具有鲁棒性，个别个体失效不会影响整个问题求解；
+		\item<4-> 个体智能简单，实现方便，执行时间短。
+	\end{itemize}
+}
+
+\frame{\frametitle{种类}
+	\begin{itemize}
+		\item<1-> 蚁群(蚁狮)
+		\item<2-> 鸟群(粒子群)
+		\item<3-> 人工鱼群
+		\item<4-> 蜂群
+		\item<5-> 蛙群
+		\item<6-> 萤火虫
+		\item<7-> 蝙蝠群
+		\item<8-> 花朵授粉
+		\item<9-> 灰狼
+	\end{itemize}
+}
+
+\frame{\frametitle{公式示例}
+
+\begin{equation*}
+p_{ij}^{k}(t) = \left\{
+	\begin{array}{lc}
+	\frac{[\tau_{ij}(t)]^{\alpha}\cdot[\eta_{ij}(t)]^{\beta}}{\sum\limits_{s\in J_{k}(i)} [\tau_{is}(t)]^{\alpha}\cdot[\eta_{is}(t)]^{\beta}}, & \mbox{如果} J \in J_{k}(i) \\
+	0, & \mbox{否则}
+	\end{array} \right.
+\end{equation*}
+}
+
+\frame{\frametitle{定理示例}
+
+\newtheorem{zh-thm}{定理}
+\begin{zh-thm}
+如果有a,b,c, 则有$a^2+b^2=c^2$。
+\end{zh-thm}
+
+\renewcommand\proofname{证明}
+\begin{proof}
+因为有a,b,c, 所以有$a^2+b^2=c^2$。
+\end{proof}
+}
+
+\frame{\frametitle{算法示例}
+
+\begin{algorithm}[H]
+\caption{计算 $y=x^n$}\label{alg1}
+\algsetup{linenosize=\tiny} \scriptsize
+	\begin{algorithmic}
+		\REQUIRE $n \geq 0 \vee x \neq 0$
+		\ENSURE $y=x^n$
+		\STATE $y \Leftarrow 1$
+		\IF{$n < 0$}
+			\STATE $X \Leftarrow 1 / x$
+			\STATE $N \Leftarrow -n$
+		\ELSE
+			\STATE $X \Leftarrow x$
+			\STATE $N \Leftarrow n$
+		\ENDIF
+		\WHILE{$N \neq 0$}
+			\IF{$N$ is even}
+				\STATE $X \Leftarrow X \times X$
+				\STATE $N \Leftarrow N / 2$
+			\ELSE[$N$ is odd]
+				\STATE $y \Leftarrow y \times X$
+				\STATE $N \Leftarrow N - 1$
+			\ENDIF
+		\ENDWHILE
+	\end{algorithmic}
+\end{algorithm}
+}
+
+\frame{\frametitle{流程图示例}
+
+\tikzstyle{block}=[rectangle,draw,fill=blue!20,text width=4em,text centered,rounded corners]
+\tikzstyle{huge-block}=[rectangle,draw,fill=cyan!20,text width=5em,text centered,rounded corners,minimum height=4em]
+\tikzstyle{line}=[draw]
+\begin{tikzpicture}[node distance=2cm, auto]
+\path[use as bounding box] (-4, 0) rectangle (10, -2);
+\path[line]<1-> node[huge-block](center){共享仓库};
+\path[line, <->]<2-> node[block, below of=center, node distance=3cm](center-develop){开发者2}
+(center)--(center-develop);
+\path[line, <->]<3-> node[block, left of=center-develop, node distance=3cm](left-develop){开发者1}
+(center)--(left-develop);
+\path[line, <->]<4-> node[block, right of=center-develop, node distance=3cm](right-develop){开发者3}
+(center)--(right-develop);
+\end{tikzpicture}
+}
+
+%end
