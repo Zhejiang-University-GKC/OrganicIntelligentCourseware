@@ -110,12 +110,12 @@ p_{ij}^{k}(t) = \left\{
 \tikzstyle{line}=[draw]
 \begin{tikzpicture}[node distance=2cm, auto]
 \path[use as bounding box] (-4, 0) rectangle (10, -2);
-\path[line]<1-> node[huge-block](center){共享仓库};
-\path[line, <->]<2-> node[block, below of=center, node distance=3cm](center-develop){开发者2}
+\path[line]<1-> node[huge-block](center){群聚智能};
+\path[line, <->]<2-> node[block, below of=center, node distance=3cm](center-develop){蚁群算法}
 (center)--(center-develop);
-\path[line, <->]<3-> node[block, left of=center-develop, node distance=3cm](left-develop){开发者1}
+\path[line, <->]<3-> node[block, left of=center-develop, node distance=3cm](left-develop){粒子群}
 (center)--(left-develop);
-\path[line, <->]<4-> node[block, right of=center-develop, node distance=3cm](right-develop){开发者3}
+\path[line, <->]<4-> node[block, right of=center-develop, node distance=3cm](right-develop){灰狼}
 (center)--(right-develop);
 \end{tikzpicture}
 }
