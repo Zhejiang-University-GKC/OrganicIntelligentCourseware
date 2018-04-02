@@ -1,16 +1,9 @@
 ﻿%
-% GNU courseware, XIN YUAN, 2017
+% GNU courseware, XIN YUAN, 2018
 %
 
 \documentclass[11pt]{beamer}
 \usepackage{beamerthemesplit}
-\usepackage{algorithm, algorithmic}
-\usepackage{tikz}
-%flowchart
-\usepackage{mathpazo}
-\usetikzlibrary{shapes.geometric, arrows}
-\usepackage{flowchart}
-%xeCJK
 \usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
 \setCJKmainfont[BoldFont=SimHei,SlantedFont=KaiTi]{SimSun}
 \setCJKsansfont[BoldFont=SimHei,SlantedFont=KaiTi]{SimSun}
@@ -21,7 +14,8 @@
 %\setCJKfamilyfont{zhhei}{Adobe Heiti Std}
 \setCJKfamilyfont{zhkai}{KaiTi}
 \setCJKfamilyfont{zhfs}{FangSong}
-\usetheme{berkeley}
+\usetheme{goettingen}
+\usecolortheme{beetle}
 
 \parindent 2em
 
@@ -42,32 +36,40 @@
 
 %summary
 
-\section{思考}
+\section{基础}
 
-\frame{\frametitle{思考}
-	\begin{enumerate}
-		\item<1-> 针对的问题是什么，除了优化问题和预测问题，还能处理其他什么问题？
-		\item<2-> 如何对求解的量设计编码？
-		\item<3-> 这一类方法的几何和物理本质是什么？
-		\item<4-> 存在过度成熟问题吗？其优缺点和适用范围？
-		\item<5-> 近年有哪些新的变种算法和模型？
-		\item<6-> 有没有进一步改进的空间？
-	\end{enumerate}
+\frame{
+\centerline{\textbf{\Huge{基础}}}
 }
 
-%topics
+\frame{\frametitle{科普}
+	\begin{itemize}
+		\item<1-> 图形摘要
+		\item<2-> 自动控制的故事
+		\item<3-> 电子搞基
+		\item<4-> 折纸
+	\end{itemize}
+}
 
-\input{topics/evolution.tex}
+\frame{\frametitle{最优化}
+	\begin{itemize}
+		\item<1-> 问题描述
+		\item<2-> 求解方法
+		\item<3-> 正则化的本质(约束是什么)
+		\item<4-> 泛函角度
+		\item<5-> 物理角度
+		\item<6-> 几何直观角度(微分几何)
+	\end{itemize}
+}
 
-\input{topics/immunity.tex}
-
-\input{topics/swarm.tex}
-
-\input{topics/forage.tex}
-
-\input{topics/ann.tex}
-
-\input{topics/cn.tex}
+\frame{\frametitle{问题描述}
+	\begin{itemize}
+		\item<1->凸函数和非凸函数
+		\item<2->线性函数和非线性函数
+		\item<3->有限维空间和无限维空间
+		\item<4->离散函数(如组合优化)和连续函数(能量泛函及最大似然)
+	\end{itemize}
+}
 
 %end
 
