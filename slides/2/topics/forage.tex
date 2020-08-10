@@ -8,21 +8,57 @@
 \centerline{\textbf{\Huge{觅食算法}}}
 }
 
-\frame{\frametitle{思想和种类}
+\frame{\frametitle{随机优化}
+针对的是样本数量过大的情形，而这些样本数据都是最优化目标泛函中的常数。
+
+~
+
+从一个初始的点(代表一个函数的参数)出发在函数空间中搜索最优化目标函数的解。
+每次迭代都只选用部分样本数据或者重新采样来估计当前的各种梯度来更新解，
+减少计算量。
+}
+
+\frame{\frametitle{随机优化}
+\begin{itemize}
+	\item<1-> 零阶估计(用函数值和一些假设算梯度和二阶海森矩阵)
+	\item<2-> 方差缩减(每次样本采样，梯度值不一样，要看成随机变量，方差大，结合先前迭代步信息缩减)
+	\item<3-> 二阶稳定点(二阶海森矩阵，抑制收敛到局部最大点，局部鞍点)
+	\item<4-> 动量(每次再多走一点距离，加快收敛)
+\end{itemize}
+}
+
+\frame{\frametitle{随机优化}
+\begin{itemize}
+	\item<1-> 假设依然较多，为了证明收敛，更多是在凑数字的游戏。适用场景存疑。
+	\item<2-> 每次迭代的对当前点的修改量，或者求下一个点，都要求解一个当前点周边范围内的最优化子问题。
+	\item<3-> 依然无法避免收敛到局部最小点。
+\end{itemize}
+}
+
+\frame{\frametitle{思想}
 
 {\CJKfamily{zhfs}
-来自动物\textbf{高效觅食}的启发：
+来自动物\textbf{高效觅食}的启发。
 }
 
 ~
 
+仍然是从一个初始的点出发在函数空间中搜索解。所有样本都参与计算。
+}
+
+\frame{\frametitle{思想}
 \begin{itemize}
-	\item<2-> 布朗运动
-	\item<3-> 随机游走
-	\item<4-> 随机微分方程和伊藤过程
-	\item<5-> 轻尾和重尾分布
-	\item<6-> 莱维过程(L\'evy Process)
-	\item<7-> 分解定理(布朗+泊松+平方可积离散鞅，可类比PID)
+	\item<1-> 布朗运动
+	\item<2-> 随机游走
+	\item<3-> 随机微分方程和伊藤过程
+	\item<4-> 轻尾和重尾分布
+\end{itemize}
+}
+
+\frame{\frametitle{算法}
+\begin{itemize}
+	\item<1-> 莱维过程(L\'evy Process)
+	\item<2-> 分解定理(布朗+泊松+平方可积离散鞅，可类比PID)
 \end{itemize}
 }
 
