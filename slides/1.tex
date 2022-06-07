@@ -55,6 +55,15 @@
 	\end{itemize}
 }
 
+\frame{\frametitle{自动控制的知识体系}
+	\begin{itemize}
+		\item<1-> 自动化学科：参见\href{https://blog.sciencenet.cn/blog-3387802-1331861.html}{网页}
+		\item<2-> 图示：参见\href{https://blog.sciencenet.cn/blog-3387802-1331871.html}{网页}
+		\item<3-> 基本问题：参见\href{https://blog.sciencenet.cn/blog-3387802-1331872.html}{网页}
+		\item<4-> 多智能体：参见\href{https://blog.sciencenet.cn/blog-3387802-1331873.html}{网页}
+	\end{itemize}
+}
+
 \frame{\frametitle{数学和物理}
 物理理论和数学描述之间的关系：
 参见\href{http://blog.sciencenet.cn/blog-39419-1271041.html}{网页}
@@ -66,11 +75,12 @@
 }
 
 \frame{\frametitle{物理历史发展思维}
-从牛顿力学到相对论：参见\href{https://mp.weixin.qq.com/s/amhuQYFELB8gmhr2d5XgMg}{网页}
-
-~
-
-能量守恒：参见\href{http://blog.sciencenet.cn/blog-39346-1293732.html}{网页}
+	\begin{itemize}
+	\item<1-> 从牛顿力学到相对论：参见\href{https://mp.weixin.qq.com/s/amhuQYFELB8gmhr2d5XgMg}{网页}
+	\item<2-> 深刻理解侠义相对论：参见\href{https://blog.sciencenet.cn/blog-3377-1325424.html}{网页}
+	\item<3-> 郎道理解狭义相对论：参见\href{https://blog.sciencenet.cn/blog-3377-1326910.html}{网页}
+	\item<4-> 能量守恒：参见\href{http://blog.sciencenet.cn/blog-39346-1293732.html}{网页}
+	\end{itemize}
 }
 
 \frame{\frametitle{教科书}
@@ -172,12 +182,44 @@
 参见\href{https://mp.weixin.qq.com/s/a2wpf7sj80IXSQwEbs_S9A}{网页}
 }
 
-\frame{\frametitle{关于统计}
-统计学思想总结
+\frame{\frametitle{关于线性代数}
+线性代数的矩阵(对比解析几何；处理坐标系无关的量)
 
 ~
 
-参见\href{https://mp.weixin.qq.com/s/Shbhd2SaAg2DmikrDdOuSw}{网页}
+参见\href{https://mp.weixin.qq.com/s/DB6_w-TuaFCxR6Fws8l99w}{网页}
+}
+
+\frame{\frametitle{关于统计}
+统计学思想总结，参见\href{https://mp.weixin.qq.com/s/Shbhd2SaAg2DmikrDdOuSw}{网页}
+
+~
+
+概率的意义：随机世界与大数法则，参见\href{https://mp.weixin.qq.com/s/yxyaEcMolGMen3-65nWCdg}{网页}
+}
+
+\frame{\frametitle{不确定性}
+为何要融合Mixture？参见\href{http://blog.sciencenet.cn/blog-388372-1299920.html}{网页}
+
+~
+
+两大载体：变量、模型。
+}
+
+\frame{\frametitle{不确定性}
+\begin{enumerate}
+\item<1-> 现实世界不可知变量的不确定性往往用noise建模，如系统噪声、量测噪声等。
+\item<2-> 不确定的模型或者假设往往混合mixture形式来表达，如高斯混合GMM，多模型MM，交互多模型IMM，
+多假设跟踪器MHT，蒙特卡洛方法(粒子群混合)，随机有限集统计学框架下的多伯努利混合MBM，广义标签多伯努利GLMB，等。
+还有Watson mixture，inverted Beta mixture，von-Mises Fisher mixture model，
+以及复合型混合：Gaussian-Student's-t mixture，Gaussian-uniform mixture等。
+\end{enumerate}
+}
+
+\frame{\frametitle{不确定性}
+思想是多模型/多分布加权平均（Arithmetic average），即AA融合模型，
+也与神经网络neuron network（NN）有着内在关联（NN可看作大量神经元的mixture混合工作机制）。
+可以进一步从几何角度思考。
 }
 
 \frame{\frametitle{应用数学}
@@ -190,8 +232,11 @@
 
 \frame{\frametitle{探讨}
 \begin{enumerate}
-\item<1-> 微分和导数，参见\href{http://blog.sciencenet.cn/blog-3377-1289944.html}{网页}
-\item<2-> 随机过程，参见\href{http://blog.sciencenet.cn/home.php?mod=space&uid=3418723&do=blog&id=1286356}{网页}
+\item<1-> 微分和导数，是线性化的开端，结合了无穷的思想，
+参见\href{http://blog.sciencenet.cn/blog-3377-1289944.html}{网页}
+\item<2-> 概率定义的探讨，相对频率、个人主观信念度、倾向度。
+参见\href{https://blog.sciencenet.cn/blog-3503579-1321302.html}{网页}
+\item<3-> 随机过程，参见\href{http://blog.sciencenet.cn/home.php?mod=space&uid=3418723&do=blog&id=1286356}{网页}
 \end{enumerate}
 }
 
