@@ -63,14 +63,6 @@
 	\end{itemize}
 }
 
-\frame{\frametitle{思想}
-深度学习的科普
-
-~
-
-参见\href{https://ishare.ifeng.com/c/s/v002JgwF4NYcbmQ82S4-_eS-_3--f5R3EL7B4JxV5Rtmq7LCNA__}{网页}
-}
-
 \frame{\frametitle{种类}
 	\begin{itemize}
 		\item<1-> Hopfield
@@ -108,7 +100,46 @@
 		\item<1-> 图神经网络
 		\item<2-> 隐私保护学习(联邦学习，差分隐私学习，联合学习，分离学习)
 		\item<3-> 因果学习(关联、干预、反事实估计和推断，结构因果，因果强化，去相关，深度稳定学习、方差分析)
+		\item<4-> 大语言模型
 	\end{itemize}
+}
+
+\frame{\frametitle{深度学习}
+深度学习的科普
+
+~
+
+参见\href{https://ishare.ifeng.com/c/s/v002JgwF4NYcbmQ82S4-_eS-_3--f5R3EL7B4JxV5Rtmq7LCNA__}{网页}
+}
+
+\frame{\frametitle{随机优化}
+针对的是使用梯度下降法求解最优化目标泛函的问题。
+其中的训练样本数据都是最优化目标泛函中的常数。
+具体研究的是训练样本数量过大的情形下梯度的计算问题。
+
+~
+
+从一个初始的点(代表一个函数的参数)出发在函数空间中搜索最优化目标函数的解。
+每次迭代都只选用部分样本数据或者重新采样来估计当前的各种梯度来更新解，
+以减少计算量。
+}
+
+\frame{\frametitle{随机优化}
+\begin{itemize}
+	\item<1-> 零阶估计(用函数值和一些假设算梯度和二阶海森矩阵)
+	\item<2-> 方差缩减(每次样本采样，梯度值不一样，要看成随机变量，方差大，结合先前迭代步信息缩减)
+	\item<3-> 二阶稳定点(二阶海森矩阵，抑制收敛到局部最大点，局部鞍点)
+	\item<4-> 动量(每次再多走一点距离，加快收敛)
+	\item<5-> 朗之万动力学(随机噪声)
+\end{itemize}
+}
+
+\frame{\frametitle{随机优化}
+\begin{itemize}
+	\item<1-> 假设依然较多，为了证明收敛，更多是在凑数字的游戏。适用场景存疑。
+	\item<2-> 每次迭代的对当前点的修改量，或者求下一个点，都要求解一个当前点周边范围内的最优化子问题。
+	\item<3-> 依然无法避免收敛到局部最小点。
+\end{itemize}
 }
 
 \frame{\frametitle{阅读}

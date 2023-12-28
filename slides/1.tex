@@ -32,6 +32,10 @@
 
 \frame{\titlepage}
 
+\frame{
+\centerline{\textbf{\Huge{基础知识}}}
+}
+
 %tables
 
 \section*{大纲}
@@ -42,16 +46,20 @@
 
 \section{基础}
 
-\frame{
-\centerline{\textbf{\Huge{基础}}}
-}
-
 \frame{\frametitle{科普}
 	\begin{itemize}
-		\item<1-> 图形摘要
-		\item<2-> 自动控制的故事
+		\item<1-> 科学网，果壳，科普中国等
+		\item<2-> 图形和视频摘要
 		\item<3-> 折纸
-		\item<4-> 科学网，果壳，科普中国等
+	\end{itemize}
+}
+
+\frame{\frametitle{计算智能的早期发展}
+	\begin{itemize}
+		\item<1-> 自动控制的故事
+		\item<2-> 系统辨识(带有激励的数据实验)
+		\item<3-> 工业大数据是否有效的辨析
+		\item<4-> 一般智能：从模式识别到人工智能
 	\end{itemize}
 }
 
@@ -65,46 +73,9 @@
 	\end{itemize}
 }
 
-\frame{\frametitle{数学和物理}
-物理理论和数学描述之间的关系：
-参见\href{http://blog.sciencenet.cn/blog-39419-1271041.html}{网页}
+%optimization
 
-~
-
-全局尺度与局部尺度：
-参见\href{http://blog.sciencenet.cn/blog-39419-1273157.html}{网页}
-}
-
-\frame{\frametitle{物理历史发展思维}
-	\begin{itemize}
-	\item<1-> 从牛顿力学到相对论：参见\href{https://mp.weixin.qq.com/s/amhuQYFELB8gmhr2d5XgMg}{网页}
-	\item<2-> 深刻理解侠义相对论：参见\href{https://blog.sciencenet.cn/blog-3377-1325424.html}{网页}
-	\item<3-> 郎道理解狭义相对论：参见\href{https://blog.sciencenet.cn/blog-3377-1326910.html}{网页}
-	\item<4-> 能量守恒：参见\href{http://blog.sciencenet.cn/blog-39346-1293732.html}{网页}
-	\item<5-> 经典力学：参见\href{https://blog.sciencenet.cn/blog-709494-1353458.html}{网页}
-	\end{itemize}
-}
-
-\frame{\frametitle{教科书}
-	\begin{itemize}
-		\item<1-> 微积分、集合到拓扑
-		\item<2-> 集合、测度、概率论、统计到实分析
-		\item<3-> 平面几何、解析几何、线性代数到向量代数
-		\item<4-> 初等代数、复杂微积分、一维到多维面积计算、复数
-		\item<5-> 复数、向量空间、超越空间、射影几何、无穷到有限、黎曼球面到复分析
-		\item<6-> 有限和无限、傅里叶级数、泛函分析、傅里叶变换、对偶空间、组合数学到最优化理论
-	\end{itemize}
-}
-
-\frame{\frametitle{教科书}
-	\begin{itemize}
-		\item<1-> 函数映射的一对多和多对一，空间的扭曲回环，非线性，空间嵌入，到升维和降维处理。
-		\item<2-> 高阶函数、张量代数，流形，到泛函。
-		\item<3-> 随机过程、随机微分方程、组合数学、离散数学、运筹学到博弈论。
-		\item<4-> 数理金融、数学工具与实验观察不符、质疑和倒查、用平稳研究的非平稳，随机变量和样本轨道可能搞混。
-		\item<5-> 抽象代数、微分几何到代数几何。
-	\end{itemize}
-}
+\section{最优化理论}
 
 \frame{\frametitle{最优化}
 	\begin{itemize}
@@ -118,6 +89,15 @@
 	\end{itemize}
 }
 
+\frame{\frametitle{问题描述}
+	\begin{itemize}
+		\item<1->凸函数和非凸函数
+		\item<2->线性函数和非线性函数
+		\item<3->有限维空间和无限维空间
+		\item<4->离散函数(如组合优化)和连续函数(能量泛函及最大似然)
+	\end{itemize}
+}
+
 \frame{\frametitle{拉格朗日乘子法}
 几何直观解释：
 
@@ -126,13 +106,12 @@
 参见\href{http://blog.sciencenet.cn/blog-3428464-1283235.html}{网页}
 }
 
-\frame{\frametitle{问题描述}
-	\begin{itemize}
-		\item<1->凸函数和非凸函数
-		\item<2->线性函数和非线性函数
-		\item<3->有限维空间和无限维空间
-		\item<4->离散函数(如组合优化)和连续函数(能量泛函及最大似然)
-	\end{itemize}
+\frame{\frametitle{正则化}
+几何直观解释：
+
+~
+
+参见\href{https://mp.weixin.qq.com/s?__biz=MzU0MDQ1NjAzNg==&mid=2247541375&idx=1&sn=2c4e882d69e0cbec156eec71a38cf599&chksm=fb3a8774cc4d0e62899bb78208be93d1bd2fe3798090c00c9a9ae078a2cd3bd98a6444594cb4&scene=27}{网页}
 }
 
 \frame{\frametitle{求解}
@@ -166,97 +145,6 @@
 在求解复杂优化问题的时候，相较于传统的数值优化算法，生物智能优化算法展现出更强的避免局部最优解的能力。
 当前，生物智能优化算法已经作为一种非常主流的优化技术广泛应用不同领域的优化问题。
 这一结论目前已经被发表的大量论文所证实。
-}
-
-\frame{\frametitle{数学体系}
-\begin{enumerate}
-\item<1-> 数学体系，参见\href{https://mp.weixin.qq.com/s/Jo7ID5xl8eOOFvUcGh8Umw}{网页}
-\item<2-> 数理逻辑两种方法要结合，参见\href{https://blog.sciencenet.cn/blog-692836-1373598.html}{网页}
-\end{enumerate}
-}
-
-\frame{\frametitle{如何学好高数}
-如何学好高数
-
-~
-
-参见\href{https://mp.weixin.qq.com/s/a2wpf7sj80IXSQwEbs_S9A}{网页}
-}
-
-\frame{\frametitle{数学即数数或数圈}
-\begin{enumerate}
-\item<1-> 数得准即代数
-\item<2-> 数不准即分析(几何辅助)
-\item<3-> 数不清即几何拓扑(无穷小，无穷大，说不清，概率统计)
-\item<4-> 怎么数即逻辑
-\end{enumerate}
-}
-
-\frame{\frametitle{关于线性代数}
-线性代数的矩阵(对比解析几何；处理坐标系无关的量)
-
-~
-
-参见\href{https://mp.weixin.qq.com/s/DB6_w-TuaFCxR6Fws8l99w}{网页}
-}
-
-\frame{\frametitle{关于统计}
-\begin{enumerate}
-\item<1-> 统计学思想总结，参见\href{https://mp.weixin.qq.com/s/Shbhd2SaAg2DmikrDdOuSw}{网页}
-\item<2-> 概率的意义：随机世界与大数法则，参见\href{https://mp.weixin.qq.com/s/yxyaEcMolGMen3-65nWCdg}{网页}
-\item<3-> 测量误差与统计推断问题的统一性，参见\href{https://blog.sciencenet.cn/blog-103568-1346732.html}{网页}
-\end{enumerate}
-}
-
-\frame{\frametitle{关于几何}
-微分几何
-
-~
-
-参见\href{https://mp.weixin.qq.com/s/nk1ta8jVrqubwhSHekq0tA}{网页}
-}
-
-\frame{\frametitle{不确定性}
-为何要融合Mixture？参见\href{http://blog.sciencenet.cn/blog-388372-1299920.html}{网页}
-
-~
-
-两大载体：变量、模型。
-}
-
-\frame{\frametitle{不确定性}
-\begin{enumerate}
-\item<1-> 现实世界不可知变量的不确定性往往用noise建模，如系统噪声、量测噪声等。
-\item<2-> 不确定的模型或者假设往往混合mixture形式来表达，如高斯混合GMM，多模型MM，交互多模型IMM，
-多假设跟踪器MHT，蒙特卡洛方法(粒子群混合)，随机有限集统计学框架下的多伯努利混合MBM，广义标签多伯努利GLMB，等。
-还有Watson mixture，inverted Beta mixture，von-Mises Fisher mixture model，
-以及复合型混合：Gaussian-Student's-t mixture，Gaussian-uniform mixture等。
-\end{enumerate}
-}
-
-\frame{\frametitle{不确定性}
-思想是多模型/多分布加权平均（Arithmetic average），即AA融合模型，
-也与神经网络neuron network（NN）有着内在关联（NN可看作大量神经元的mixture混合工作机制）。
-可以进一步从几何角度思考。
-}
-
-\frame{\frametitle{应用数学}
-应用数学的强大威力
-
-~
-
-参见\href{https://mp.weixin.qq.com/s/ks05jYJHG-bleVcPhDWQhA}{网页}
-}
-
-\frame{\frametitle{探讨}
-\begin{enumerate}
-\item<1-> 微分和导数，是线性化的开端，结合了无穷的思想，
-参见\href{http://blog.sciencenet.cn/blog-3377-1289944.html}{网页}
-\item<2-> 概率定义的探讨，相对频率、个人主观信念度、倾向度。
-参见\href{https://blog.sciencenet.cn/blog-3503579-1321302.html}{网页}
-\item<3-> 随机过程，参见\href{http://blog.sciencenet.cn/home.php?mod=space&uid=3418723&do=blog&id=1286356}{网页1}
-\href{https://blog.sciencenet.cn/blog-3418723-1365894.html}{网页2}
-\end{enumerate}
 }
 
 %end
